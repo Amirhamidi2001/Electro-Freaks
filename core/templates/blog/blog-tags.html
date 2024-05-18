@@ -1,0 +1,10 @@
+<aside class="single_sidebar_widget tag_cloud_widget">
+    <h4 class="widget_title">تگ ها</h4>
+    {% for tag in tags %}
+    <ul class="list">
+        <li>
+            <a href="{% url 'blog:tag' tag_name=tag.name %}">{{tag.name}}</a>
+        </li>
+    </ul>
+    {% endfor %}
+</aside>
